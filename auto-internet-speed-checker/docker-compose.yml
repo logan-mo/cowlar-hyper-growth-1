@@ -10,5 +10,5 @@ services:
   restarter:
     image: docker:cli
     volumes: ["/var/run/docker.sock:/var/run/docker.sock"]
-    command: ["sh", "-c", "while true; do sleep 10; docker restart speedtest; done"]
+    command: ["sh", "-c", "while true; do sleep 600; docker restart speedtest; done"]
     restart: unless-stopped
